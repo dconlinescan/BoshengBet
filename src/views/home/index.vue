@@ -60,11 +60,18 @@
 
 <style lang="less">
     p.title{
-        font-size: 2.08vw;
+
         font-weight: 500;
         color: rgba(51,51,51,1);
-        line-height: 3.2vw;
         text-align: center;
+        @media screen and (min-device-width: 768px){
+            font-size: 2.08vw;
+            line-height: 3.2vw;
+        }
+        @media screen and (max-device-width: 768px){
+            font-size: 5vw;
+            line-height: 7vw;
+        }
     }
     .underline{
         text-align: center;

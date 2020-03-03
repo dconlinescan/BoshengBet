@@ -74,24 +74,46 @@
     .header{
         z-index: 999;
         width: 100%;
-        height: 3vw;
+
+        @media screen and (min-device-width: 768px){
+            height: 3vw;
+        }
+        @media screen and (max-device-width: 768px){
+            height: 8vw;
+        }
         min-height: 0.3rem;
         .content{
             display: block;
             margin: 0 auto;
-            width: 62.5vw;
+            @media screen and (min-device-width: 768px){
+                width: 62.5vw;
+            }
+            @media screen and (max-device-width: 768px){
+                width: 100vw;
+            }
             position: relative;
             .logo{
                 position: absolute;
                 left: 0;
                 top: 0.8vw;
                 img{
-                    width: 6.39vw;
                     min-width: 1rem;
+                    position: absolute;
+                    @media screen and (min-device-width: 768px){
+                        width: 6.39vw;
+                        top: 0;
+                        left: 0;
+                    }
+                    @media screen and (max-device-width: 768px){
+                        width: 20vw;
+                        top: 1vw;
+                        left: 5vw;
+                    }
                 }
             }
             .lang{
                 position: absolute;
+                top: 0;
                 right: 0;
                 background: rgba(255,255,255,1);
                 @media screen and (min-device-width: 768px){
@@ -100,40 +122,41 @@
                     height: 1.71vw;
                     min-height: 0.2rem;
                     border-radius: 0.855vw;
-                    top: 0.7vw;
+                    top: 1.1vw;
                 }
                 @media screen and (max-device-width: 768px){
-                    width: 22%;
-                    height: 2.05vw;
+                    width: 30vw;
+                    height: 8vw;
                     border-radius: 1.025vw;
-                    top: 1.2vw;
+                    top: 2.5vw;
                 }
                 ul{
-                    line-height: 1.71vw;
+                    @media screen and (min-device-width: 768px){
+                        width: 7.182vw;
+                        min-width: 1rem;
+                    }
+                    @media screen and (max-device-width: 768px){
+                        width: 20vw;
+                    }
                     li{
-
-                        display: inline-block;
                         width: 32%;
+                        float: left;
                         border-right: 1px solid #999999;
                         line-height: 75%;
                         text-align: center;
                         color: #666666;
                         cursor: pointer;
-
                         @media screen and (min-device-width: 768px){
                             font-size: 0.8vw;
                         }
                         @media screen and (max-device-width: 768px){
-                            font-size: 1.2vw;
+                            font-size: 4vw;
                         }
                         &:nth-child(3){
                             border-right: none;
                         }
                         &.select{
                             color: #2F54EB;
-                        }
-                        @media screen and (min-device-width: 601px){
-                            html{ font-size:100px;}
                         }
                     }
 

@@ -33,12 +33,22 @@
 
 <style lang="less" scoped>
     .contact{
+        overflow: hidden;
         width: 100%;
-        height: 13.38vw;
+        @media screen and (min-device-width: 768px){
+            height: 13.38vw;
+        }
+        @media screen and (max-device-width: 768px){
+            height: 30vw;
+        }
         background: linear-gradient(360deg,rgba(32,35,45,1) 0%,rgba(21,23,32,1) 100%);
         color: #ffffff;
         padding-top: 2.6vw;
         .content{
+            @media screen and (max-device-width: 768px){
+                transform: scale(2);
+                margin: 10vw 0 0 40vw;
+            }
             width: 58vw;
             margin: 0 auto;
             .content_lf{

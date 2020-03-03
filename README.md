@@ -1,5 +1,5 @@
 # homepage
-
+1vw = 19.2px
 ## Project setup
 ```
 npm install

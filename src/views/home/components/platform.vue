@@ -1,7 +1,6 @@
 <template>
-    <div class="platform">
-        <div class="platform-img" :style="'background-image: url('+ platform.img[lang] +');'"></div>
-        <div class="platform-text">
+    <div :style="lang==='en'?'padding: 9vw 0;':''" class="platform">
+        <div class="platform-text" :style="lang==='en'?'paddingTop: 0; marginTop: -3vw':''">
             <p class="title">{{ $t('platformTitle') }}</p>
             <ul>
                 <li><i class="icon-1"></i><span>{{ $t('platformText2') }}</span></li>
@@ -9,6 +8,8 @@
                 <li><i class="icon-3"></i><span>{{ $t('platformText4') }}</span></li>
             </ul>
         </div>
+        <div class="platform-img" :style="'background-image: url('+ platform.img[lang] +');'"></div>
+        <div class="clear"></div>
     </div>
 </template>
 
@@ -40,23 +41,39 @@
 <style lang="less" scoped>
     .platform{
         width: 100%;
-        padding: 3vw 0;
+        padding: 6vw 0 3vw;
         .platform-img{
-            width: 53vw;
             height: 30.4vw;
             background-repeat: no-repeat;
             background-size: contain;
-            display: inline-block;
+            @media screen and (min-device-width: 768px){
+                float: left;
+                width: 53vw;
+            }
+            @media screen and (max-device-width: 768px){
+                display: block;
+                margin: 0 auto;
+                background-position: center center;
+                width: 100vw;
+            }
         }
         .platform-text{
-            width: 40vw;
-            padding-top: 4vw;
+            @media screen and (min-device-width: 768px){
+                float: right;
+                width: 40vw;
+                font-size: 1.6vw;
+            }
+            @media screen and (max-device-width: 768px){
+                display: block;
+                margin: 2vw auto 5vw;
+                width: 90vw;
+                font-size: 3vw;
+            }
             display: inline-block;
             vertical-align: top;
             ul{
                 margin-top: 2.5vw;
                 li{
-                    font-size: 1.6vw;
                     font-weight: 400;
                     color: rgba(77,77,77,1);
                     line-height: 2.28vw;
@@ -81,10 +98,19 @@
                     }
                     span{
                         display: inline-block;
-                        width: 36vw;
+                        @media screen and (min-device-width: 768px){
+                            width: 36vw;
+                        }
+                        @media screen and (max-device-width: 768px){
+                            width: 85vw;
+                            line-height: 4vw;
+                        }
                     }
                 }
             }
+        }
+        .clear{
+            clear: both;
         }
     }
 </style>

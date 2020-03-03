@@ -32,15 +32,19 @@
 
 <style lang="less" scoped>
     .recharge{
+        overflow: hidden;
         background: url("../../../assets/images/home/recharge/recharge_bg.jpg") no-repeat;
         background-size: cover;
         color: #ffffff;
-        padding: 7.81vw 0;
+        padding: 6vw 0 7.81vw;
         p.title{
             color: #ffffff;
             margin-bottom: 5.21vw;
         }
         ul{
+            @media screen and (max-device-width: 768px){
+                transform: scale(1.5);
+            }
             display: flex;
             width: 70vw;
             margin: 0 auto;

@@ -4,12 +4,12 @@
         <div class="content">
             <img :src="media.img1[lang]" alt="">
             <img :src="media.img2[lang]" alt="">
-            <p>{{ $t('mediaText1') }}</p>
+            <p :class="lang==='en'?'isEn':''" :style="lang==='en'?'line-height: 1.5vw;':''">{{ $t('mediaText1') }}</p>
         </div>
         <div class="content">
             <img :src="media.img3[lang]" alt="">
             <img :src="media.img4[lang]" alt="">
-            <p>{{ $t('mediaText2') }}</p>
+            <p :style="lang==='en'?'line-height: 1.5vw;':''">{{ $t('mediaText2') }}</p>
         </div>
     </div>
 </template>
@@ -67,15 +67,22 @@
     .media{
         background: url("../../../assets/images/home/media/media_bg.jpg") no-repeat;
         background-size: cover;
-        padding: 2vw 0 7vw 0;
+        padding: 1vw 0 7vw 0;
         p.title{
             color: #ffffff;
             margin-top: 5vw;
+            @media screen and (max-device-width: 768px){
+                margin-bottom: 8vw;
+            }
         }
         .content{
             width:68.42vw;
             margin: 1.14vw auto;
             position: relative;
+            @media screen and (max-device-width: 768px){
+                transform: scale(1.4);
+                margin: 10vw auto 5vw;
+            }
             &:nth-child(2){
                 margin-top: 4vw;
             }
@@ -98,7 +105,7 @@
                 line-height: 4.56vw;
                 text-indent: 2vw;
             }
-            &:nth-child(3) {
+            &:nth-child(3){
                 p{
                     width: calc(100% - 4vw);
                     line-height: 2.33vw;
@@ -107,6 +114,15 @@
                     padding: 1.5vw 2vw;
                     text-indent: 0;
                 }
+            }
+            &:nth-child(2){
+                p.isEn{
+                    top: 11vw;
+                    height: 3.5vw;
+                    width: calc(100% - 4vw);
+                    padding: 1.5vw 2vw;
+                }
+
             }
         }
     }

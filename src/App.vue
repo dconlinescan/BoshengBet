@@ -15,7 +15,9 @@ export default {
     beforeMount() {
         if (!localStorage.getItem('LANG')) {
             localStorage.setItem('LANG', this.getLang())
+
         }
+        document.title = this.$t('title')
     },
     mounted() {
         // 禁用右键菜单

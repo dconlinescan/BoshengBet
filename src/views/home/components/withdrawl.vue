@@ -15,7 +15,7 @@
             <li>
                 <i class="icon-lock"></i>
                 <p class="contTitle">{{ $t('lockTitle') }}</p>
-                <p class="contText">{{ $t('lockText') }}</p>
+                <p :style="lang==='en'?'line-height: 1.5vw;':''" class="contText">{{ $t('lockText') }}</p>
             </li>
         </ul>
         <div class="styles">
@@ -70,15 +70,23 @@
 
 <style lang="less" scoped>
     .withdrawl{
+        overflow: hidden;
         background: url("../../../assets/images/home/withdrawl/withdrawl_bg.jpg") no-repeat;
         background-size: cover;
-        padding: 4.56vw 0 13vw 0;
+        padding: 6vw 0 13vw 0;
+        @media screen and (max-device-width: 768px){
+            padding: 4.56vw 0 15vw 0;
+        }
         color: #ffffff;
         p.title{
             margin-bottom: 2vw;
             color: #ffffff;
         }
         .content{
+            @media screen and (max-device-width: 768px){
+                transform: scale(1.4);
+                margin: 10vw 14vw;
+            }
             width: 70vw;
             margin: 0 auto;
             li{
@@ -133,7 +141,6 @@
                     }
                 }
                 .contTitle{
-                    font-size: 1.94vw;
                     font-weight: 500;
                     color: #ffffff;
                     line-height: 1.94vw;
@@ -175,18 +182,34 @@
             background-size: cover;
             width: 70vw;
             height: 39.84vw;
-            margin: 4.5vw 16vw;
             position: relative;
             color: #ffffff;
             padding-top: 10.16vw;
+            @media screen and (min-device-width: 768px){
+                margin: 3vw 16vw 4.07vw;
+            }
+            @media screen and (max-device-width: 768px){
+                transform: scale(1.2);
+                margin: 10vw 10vw 20vw;
+            }
             .styleTitle{
                 margin-left: 7.81vw;
-                font-size: 2.08vw;
+                @media screen and (min-device-width: 768px){
+                    font-size: 2.08vw;
+                }
+                @media screen and (max-device-width: 768px){
+                    font-size: 3.5vw;
+                }
                 margin-bottom: 1.88vw;
             }
             .styleText{
                 margin-left: 7.81vw;
-                font-size: 1.46vw;
+                @media screen and (min-device-width: 768px){
+                    font-size: 1.46vw;
+                }
+                @media screen and (max-device-width: 768px){
+                    font-size: 2vw;
+                }
                 width: 70%;
                 display: block;
             }
@@ -195,6 +218,9 @@
                 bottom: -10.1vw;
                 left: 2vw;
                 width: 79vw;
+                @media screen and (max-device-width: 768px){
+                    bottom: -20vw;
+                }
                 li{
                     width: 15.6vw;
                     display: inline-block;
@@ -207,6 +233,9 @@
                         margin-top: 2.63vw;
                         text-align: center;
                         font-size: 1.35vw;
+                        @media screen and (max-device-width: 768px){
+                            font-size: 2vw;
+                        }
                     }
                 }
             }

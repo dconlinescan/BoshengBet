@@ -46,23 +46,33 @@
 
 <style lang="less" scoped>
     .extend{
+        overflow: hidden;
         color: #ffffff;
         background: url("../../../assets/images/home/extend/extend_bg.jpg") no-repeat;
         background-size: cover;
-        padding: 2.4vw 0 7.81vw 0;
+        padding: 6vw 0 7.81vw 0;
         p.title{
             color: #ffffff;
             margin: 0 0 0.87vw 0;
         }
         p.title2{
             font-size: 1.63vw;
+            width: 65vw;
             text-align: center;
-            margin-bottom: 4.3vw;
+            margin: 0 auto 4.3vw;
+            @media screen and (max-device-width: 768px){
+                transform: scale(1.5);
+                margin: 2vw auto 6vw;
+            }
         }
         .content{
+            @media screen and (max-device-width: 768px){
+                transform: scale(1.3);
+            }
             text-align: center;
             ul{
                 li{
+                    vertical-align: bottom;
                     width: 20.72vw;
                     height: 20.65vw;
                     display: inline-block;

@@ -1,11 +1,14 @@
 <template>
-    <swiper :options="swiperOption" ref="mySwiper">
-        <!-- slides -->
-        <swiper-slide v-for="(picitem, index) in items" :key="index">
-            <img :src="picitem[lang]" alt="">
-        </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-    </swiper>
+    <div class="siperSec">
+        <swiper :options="swiperOption" ref="mySwiper">
+            <!-- slides -->
+            <swiper-slide v-for="(picitem, index) in items" :key="index">
+                <img :src="picitem[lang]" alt="">
+            </swiper-slide>
+            <div class="swiper-pagination" slot="pagination"></div>
+        </swiper>
+    </div>
+
 </template>
 
 <script>
@@ -116,19 +119,27 @@
 </script>
 
 <style lang="less">
-    .swiper-slide img{
-        width: 100%;
-    }
-    .img-bullet{
-        display: inline-block;
-        width: 0.91vw;
-        height: 0.57vw;
-        background: rgba(255,255,255,0.5);
-        margin: 0 0.5vw;
-        border-radius: 0.25vw;
-        &.swiper-pagination-bullet-active{
-            width: 1.71vw;
-            background: rgba(255,255,255,0.9);
+    .siperSec{
+        .swiper-slide img{
+            width: 100%;
+        }
+        .img-bullet{
+            display: inline-block;
+            width: 0.91vw;
+            height: 0.57vw;
+            background: rgba(255,255,255,0.5);
+            margin: 0 0.5vw;
+            border-radius: 0.25vw;
+            &.swiper-pagination-bullet-active{
+                width: 1.71vw;
+                background: rgba(255,255,255,0.9);
+            }
+        }
+        .swiper-container{
+            @media screen and (min-device-width: 768px) {
+                height: 30vw;
+            }
         }
     }
+
 </style>
