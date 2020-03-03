@@ -4,7 +4,7 @@
         <ul :class="lang==='en'?'pd30vw':''">
             <li>
                 <i></i>
-                <div :style="lang==='en'?'vertical-align: middle;':''">
+                <div>
                     <p :style="lang==='en'?'width:25vw;':''" class="strongTitle">{{ $t('strongTitle1') }}</p>
                     <span :style="lang==='en'?'width:25vw;':''">{{ $t('strongText1') }}</span>
                 </div>
@@ -18,7 +18,7 @@
             </li>
             <li>
                 <i></i>
-                <div :style="lang==='en'?'vertical-align: middle;':''">
+                <div>
                     <p :style="lang==='en'?'width:25vw;':''" class="strongTitle">{{ $t('strongTitle3') }}</p>
                     <span :style="lang==='en'?'width:25vw;':''">{{ $t('strongText3') }}</span>
                 </div>
@@ -32,7 +32,7 @@
             </li>
             <li>
                 <i></i>
-                <div :style="lang==='en'?'vertical-align: middle;':''">
+                <div>
                     <p :style="lang==='en'?'width:25vw;':''" class="strongTitle">{{ $t('strongTitle5') }}</p>
                     <span :style="lang==='en'?'width:25vw;':''">{{ $t('strongText5') }}</span>
                 </div>
@@ -46,7 +46,7 @@
             </li>
             <li>
                 <i></i>
-                <div :style="lang==='en'?'vertical-align: middle; width:30vw;':''">
+                <div :style="lang==='en'?'width:30vw;':''">
                     <p :style="lang==='en'?'width:25vw;':''" class="strongTitle">{{ $t('strongTitle7') }}</p>
                     <span :style="lang==='en'?'width:25vw;':''">{{ $t('strongText7') }}</span>
                 </div>
@@ -191,6 +191,11 @@
                     i{
                         background-image: url("../../../assets/images/home/strong/1.png");
                     }
+                    div{
+                        @media screen and (min-device-width: 768px){
+                            margin-top: 3vw;
+                        }
+                    }
                 }
                 &:nth-child(2){
                     i{
@@ -203,6 +208,11 @@
                 &:nth-child(3){
                     i{
                         background-image: url("../../../assets/images/home/strong/3.png");
+                    }
+                    div{
+                        @media screen and (min-device-width: 768px){
+                            margin-top: 3vw;
+                        }
                     }
                 }
                 &:nth-child(4){
@@ -217,6 +227,11 @@
                     i{
                         margin-bottom: 0;
                         background-image: url("../../../assets/images/home/strong/5.png");
+                    }
+                    div{
+                        @media screen and (min-device-width: 768px){
+                            margin-top: 1vw;
+                        }
                     }
                 }
                 &:nth-child(6){
@@ -234,7 +249,9 @@
                         background-image: url("../../../assets/images/home/strong/7.png");
                     }
                     div{
-                        vertical-align: middle;
+                        @media screen and (min-device-width: 768px){
+                            margin-top: 3vw;
+                        }
                     }
                 }
             }
