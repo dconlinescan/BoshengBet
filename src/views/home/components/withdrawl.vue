@@ -141,6 +141,7 @@
                     }
                 }
                 .contTitle{
+                    font-size: 1.94vw;
                     font-weight: 500;
                     color: #ffffff;
                     line-height: 1.94vw;
@@ -153,25 +154,32 @@
                     width: 15vw;
                     margin: 0 auto;
                 }
-                &:hover{
-                    background-image: url("../../../assets/images/home/withdrawl/selectBg.png");
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    .contTitle{
-                        color: rgba(33,33,40,1);
-                    }
-                    .contText{
-                        color: #555567;
-                    }
-                    i{
-                        &.icon-lamp{
-                            background-image: url("../../../assets/images/home/withdrawl/1_select.png");
+                @media screen and (min-device-width: 768px) {
+                    &:hover {
+                        background-image: url("../../../assets/images/home/withdrawl/selectBg.png");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+
+                        .contTitle {
+                            color: rgba(33, 33, 40, 1);
                         }
-                        &.icon-clock{
-                            background-image: url("../../../assets/images/home/withdrawl/2_select.png");
+
+                        .contText {
+                            color: #555567;
                         }
-                        &.icon-lock{
-                            background-image: url("../../../assets/images/home/withdrawl/3_select.png");
+
+                        i {
+                            &.icon-lamp {
+                                background-image: url("../../../assets/images/home/withdrawl/1_select.png");
+                            }
+
+                            &.icon-clock {
+                                background-image: url("../../../assets/images/home/withdrawl/2_select.png");
+                            }
+
+                            &.icon-lock {
+                                background-image: url("../../../assets/images/home/withdrawl/3_select.png");
+                            }
                         }
                     }
                 }

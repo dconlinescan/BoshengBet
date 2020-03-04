@@ -119,7 +119,7 @@
                 line-height: 3vw;
             }
             @media screen and (max-device-width: 768px){
-                font-size: 3vw;
+                font-size: 2vw;
                 line-height: 4vw;
             }
         }

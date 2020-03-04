@@ -46,8 +46,8 @@
         padding-top: 2.6vw;
         .content{
             @media screen and (max-device-width: 768px){
-                transform: scale(2);
-                margin: 10vw 0 0 40vw;
+                transform: scale(1.6);
+                margin: 8vw 0 0 35vw;
             }
             width: 58vw;
             margin: 0 auto;
@@ -68,6 +68,9 @@
                     font-size: 0.94vw;
                     text-align: center;
                     border-radius: 0.3vw;
+                    @media screen and (max-device-width: 768px){
+                        font-size: 0.94vw;
+                    }
                 }
                 .copyright{
                     margin: 2.97vw 0 1.2vw 0;
