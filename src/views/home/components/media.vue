@@ -97,13 +97,14 @@
                 position: absolute;
                 top: 12.85vw;
                 left: 0;
-                width: 100%;
+                width: calc(100% - 4vw);
                 height: 4.56vw;
                 background: rgba(0,0,0,0.5);
                 font-size: 1.6vw;
                 color: rgba(255,255,255,1);
                 line-height: 4.56vw;
-                text-indent: 2vw;
+                text-indent: 0;
+                padding: 0 2vw;
             }
             &:nth-child(3){
                 p{

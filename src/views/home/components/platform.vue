@@ -52,9 +52,10 @@
             }
             @media screen and (max-device-width: 768px){
                 display: block;
-                margin: 0 auto;
+                margin: 12vw auto 6vw;
                 background-position: center center;
                 width: 100vw;
+                transform: scale(1.5);
             }
         }
         .platform-text{
@@ -94,6 +95,10 @@
                         }
                         &.icon-3{
                             background-image: url("../../../assets/images/home/platform/3.png");
+                        }
+                        @media screen and (max-device-width: 768px){
+                            transform: scale(1.6);
+                            margin-top: 1.5vw;
                         }
                     }
                     span{
