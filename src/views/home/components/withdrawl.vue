@@ -99,6 +99,9 @@
                 text-indent: -1vw;
                 &:nth-child(2){
                     @media screen and (max-device-width: 768px){
+                        .contText{
+                            width: 13vw;
+                        }
                         background-image: url("../../../assets/images/home/withdrawl/selectBg.png");
                         background-repeat: no-repeat;
                         background-size: contain;
@@ -153,7 +156,7 @@
                     font-size: 1.4vw;
                     color: #ffffff;
                     line-height: 2.28vw;
-                    width: 13vw;
+                    width: 15vw;
                     margin: 0 auto;
                 }
                 @media screen and (min-device-width: 768px) {
