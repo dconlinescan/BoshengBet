@@ -58,4 +58,9 @@ export default {
 
 <style lang="less">
     @import "assets/style/base.less";
+    #app{
+        overflow: hidden;
+        font-size: 0;
+        background: #000;
+    }
 </style>

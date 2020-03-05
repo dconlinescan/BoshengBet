@@ -74,7 +74,7 @@
     .header{
         z-index: 999;
         width: 100%;
-
+        background: #ffffff;
         @media screen and (min-device-width: 768px){
             height: 3vw;
         }

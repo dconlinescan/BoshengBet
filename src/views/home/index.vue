@@ -11,7 +11,7 @@
         <!--动画视频直播-->
         <Media />
         <!--强大-->
-        <Strong />
+        <StrongSec />
         <!--代理模式-->
         <Extend />
         <!--充值方式-->
@@ -31,7 +31,7 @@
     import Plays from './components/plays'
     import Platform from './components/platform'
     import Media from './components/media'
-    import Strong from './components/strong'
+    import StrongSec from './components/strong'
     import Extend from './components/extend'
     import Recharge from './components/recharge'
     import Withdrawl from './components/withdrawl'
@@ -45,7 +45,7 @@
             Plays,
             Platform,
             Media,
-            Strong,
+            StrongSec,
             Extend,
             Recharge,
             Withdrawl,

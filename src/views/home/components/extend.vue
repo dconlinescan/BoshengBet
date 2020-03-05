@@ -46,10 +46,11 @@
 
 <style lang="less" scoped>
     .extend{
+        font-size: 0;
         overflow: hidden;
         color: #ffffff;
         background: url("../../../assets/images/home/extend/extend_bg.jpg") no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
         padding: 6vw 0 7.81vw 0;
         p.title{
             color: #ffffff;
@@ -74,7 +75,7 @@
                 li{
                     vertical-align: bottom;
                     width: 20.72vw;
-                    height: 20.65vw;
+                     height: 20.65vw;
                     display: inline-block;
                     background-color: #ffffff;
                     margin-right: 3.37vw;

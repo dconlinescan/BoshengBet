@@ -8,14 +8,14 @@
                 <p class="contText">{{ $t('lampText') }}</p>
             </li>
             <li>
-                <i class="icon-clock"></i>
-                <p class="contTitle">{{ $t('clockTitle') }}</p>
-                <p class="contText">{{ $t('clockText') }}</p>
-            </li>
-            <li>
                 <i class="icon-lock"></i>
                 <p class="contTitle">{{ $t('lockTitle') }}</p>
                 <p :style="lang==='en'?'line-height: 1.5vw;':''" class="contText">{{ $t('lockText') }}</p>
+            </li>
+            <li>
+                <i class="icon-clock"></i>
+                <p class="contTitle">{{ $t('clockTitle') }}</p>
+                <p class="contText">{{ $t('clockText') }}</p>
             </li>
         </ul>
         <div class="styles">
@@ -98,9 +98,6 @@
                 vertical-align: bottom;
                 text-indent: -1vw;
                 &:nth-child(2){
-                    .contText{
-                        width: 14vw;
-                    }
                     @media screen and (max-device-width: 768px){
                         background-image: url("../../../assets/images/home/withdrawl/selectBg.png");
                         background-repeat: no-repeat;
@@ -112,15 +109,20 @@
                             color: #555567;
                         }
                         i{
-                            &.icon-clock{
-                                background-image: url("../../../assets/images/home/withdrawl/2_select.png");
+                            &.icon-lock{
+                                background-image: url("../../../assets/images/home/withdrawl/3_select.png");
                             }
                         }
                     }
                 }
                 i{
                     display: block;
-                    margin: 6vw 0 3vw 9.5vw;
+                    @media screen and (max-device-width: 768px){
+                        margin: 5.5vw 0 1.5vw 9.5vw;
+                    }
+                    @media screen and (min-device-width: 768px){
+                        margin: 6vw 0 3vw 9.5vw;
+                    }
                     background-repeat: no-repeat;
                     background-size: contain;
                     &.icon-lamp{
@@ -151,7 +153,7 @@
                     font-size: 1.4vw;
                     color: #ffffff;
                     line-height: 2.28vw;
-                    width: 15vw;
+                    width: 13vw;
                     margin: 0 auto;
                 }
                 @media screen and (min-device-width: 768px) {
@@ -159,24 +161,19 @@
                         background-image: url("../../../assets/images/home/withdrawl/selectBg.png");
                         background-repeat: no-repeat;
                         background-size: contain;
-
                         .contTitle {
                             color: rgba(33, 33, 40, 1);
                         }
-
                         .contText {
                             color: #555567;
                         }
-
                         i {
                             &.icon-lamp {
                                 background-image: url("../../../assets/images/home/withdrawl/1_select.png");
                             }
-
                             &.icon-clock {
                                 background-image: url("../../../assets/images/home/withdrawl/2_select.png");
                             }
-
                             &.icon-lock {
                                 background-image: url("../../../assets/images/home/withdrawl/3_select.png");
                             }

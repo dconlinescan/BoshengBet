@@ -40,15 +40,18 @@
 
 <style lang="less" scoped>
     .platform{
+        overflow: hidden;
         width: 100%;
         padding: 6vw 0 3vw;
+        background: #ffffff;
         .platform-img{
             height: 30.4vw;
             background-repeat: no-repeat;
             background-size: contain;
             @media screen and (min-device-width: 768px){
                 float: left;
-                width: 53vw;
+                width: 48vw;
+                margin-left: 5vw;
             }
             @media screen and (max-device-width: 768px){
                 display: block;
@@ -63,6 +66,7 @@
                 float: right;
                 width: 40vw;
                 font-size: 1.6vw;
+                margin-right: 5vw;
             }
             @media screen and (max-device-width: 768px){
                 display: block;

@@ -109,7 +109,8 @@
     .plays{
         padding: 6vw 0 2vw;
         background: url("../../../assets/images/home/plays/plays_bg.jpg") no-repeat center;
-        background-size: cover;
+        background-size: 100% 100%;
+        background-color: #ffffff;
         .playsText1{
             font-size: 1.45vw;
             color: #666666;

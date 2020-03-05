@@ -68,6 +68,7 @@
         background: url("../../../assets/images/home/media/media_bg.jpg") no-repeat;
         background-size: cover;
         padding: 1vw 0 7vw 0;
+        overflow: hidden;
         p.title{
             color: #ffffff;
             margin-top: 5vw;
@@ -95,7 +96,7 @@
             }
             p{
                 position: absolute;
-                top: 12.85vw;
+                bottom: 0;
                 left: 0;
                 width: calc(100% - 4vw);
                 height: 4.56vw;
@@ -111,14 +112,14 @@
                     width: calc(100% - 4vw);
                     line-height: 2.33vw;
                     height: 4.14vw;
-                    top: 10.3vw;
+                    bottom: 0;
                     padding: 1.5vw 2vw;
                     text-indent: 0;
                 }
             }
             &:nth-child(2){
                 p.isEn{
-                    top: 11vw;
+                    bottom: 0;
                     height: 3.5vw;
                     width: calc(100% - 4vw);
                     padding: 1.5vw 2vw;

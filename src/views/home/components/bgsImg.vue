@@ -59,6 +59,7 @@
 <style lang="less" scoped>
     .bgs-image{
         width: 100%;
+        font-size: 0;
         img{
             display: block;
             width: 100%;

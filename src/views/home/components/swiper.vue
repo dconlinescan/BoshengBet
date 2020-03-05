@@ -57,7 +57,7 @@
                     notNextTick: true,
                     loop: true,
                     autoplay: {
-                        delay: 5000,
+                        delay: 3000,
                         stopOnLastSlide: false,
                         disableOnInteraction: true,
                     },
@@ -120,6 +120,7 @@
 
 <style lang="less">
     .siperSec{
+        background: #ffffff;
         .swiper-slide img{
             width: 100%;
         }
