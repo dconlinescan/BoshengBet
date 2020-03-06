@@ -59,7 +59,7 @@
                     autoplay: {
                         delay: 3000,
                         stopOnLastSlide: false,
-                        disableOnInteraction: true,
+                        disableOnInteraction: false,
                     },
                     speed: 1000,
                     direction: 'horizontal',
