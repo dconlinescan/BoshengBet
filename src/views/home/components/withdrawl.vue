@@ -22,9 +22,8 @@
             <p class="styleTitle">{{ $t('styleTitle') }}</p>
             <p class="styleText">{{ $t('styleText') }}</p>
             <ul class="styleImg">
-                <li v-for="(item, index) in styles" :key="index">
+                <li v-for="(item, index) in styles[lang]" :key="index">
                     <img :src="item.img" alt="">
-                    <p>{{ $t(item.name) }}</p>
                 </li>
             </ul>
         </div>
@@ -32,32 +31,63 @@
 </template>
 
 <script>
-    import BlueStyle from '@/assets/images/home/withdrawl/blue.png'
-    import GoldenStyle from '@/assets/images/home/withdrawl/golden.png'
-    import WhiteStyle from '@/assets/images/home/withdrawl/white.png'
-    import BetStyle from '@/assets/images/home/withdrawl/bet.png'
+    import BlueStylecn from '@/assets/images/home/withdrawl/blue_cn.png'
+    import BlueStyleen from '@/assets/images/home/withdrawl/blue_en.png'
+    import BlueStyletw from '@/assets/images/home/withdrawl/blue_tw.png'
+    import GoldenStylecn from '@/assets/images/home/withdrawl/golden_cn.png'
+    import GoldenStyleen from '@/assets/images/home/withdrawl/golden_en.png'
+    import GoldenStyletw from '@/assets/images/home/withdrawl/golden_tw.png'
+    import WhiteStylecn from '@/assets/images/home/withdrawl/white_cn.png'
+    import WhiteStyleen from '@/assets/images/home/withdrawl/white_en.png'
+    import WhiteStyletw from '@/assets/images/home/withdrawl/white_tw.png'
     export default {
         name: "withdrawl",
         data() {
             return {
-                styles: [
-                    {
-                        img: WhiteStyle,
-                        name: 'whiteColor'
-                    },
-                    {
-                        img: BetStyle,
-                        name: 'betColor'
-                    },
-                    {
-                        img: BlueStyle,
-                        name: 'blueColor'
-                    },
-                    {
-                        img: GoldenStyle,
-                        name: 'goldenColor'
-                    },
-                ]
+                styles: {
+                    cn: [
+                        {
+                            img: WhiteStylecn,
+                            name: 'whiteColor'
+                        },
+                        {
+                            img: BlueStylecn,
+                            name: 'blueColor'
+                        },
+                        {
+                            img: GoldenStylecn,
+                            name: 'goldenColor'
+                        }
+                    ],
+                    en: [
+                        {
+                            img: WhiteStyleen,
+                            name: 'whiteColor'
+                        },
+                        {
+                            img: BlueStyleen,
+                            name: 'blueColor'
+                        },
+                        {
+                            img: GoldenStyleen,
+                            name: 'goldenColor'
+                        }
+                    ],
+                    tw: [
+                        {
+                            img: WhiteStyletw,
+                            name: 'whiteColor'
+                        },
+                        {
+                            img: BlueStyletw,
+                            name: 'blueColor'
+                        },
+                        {
+                            img: GoldenStyletw,
+                            name: 'goldenColor'
+                        }
+                    ]
+                }
             }
         },
         computed: {
@@ -71,9 +101,9 @@
 <style lang="less" scoped>
     .withdrawl{
         overflow: hidden;
-        background: url("../../../assets/images/home/withdrawl/withdrawl_bg.jpg") no-repeat;
+        background: url("../../../assets/images/home/withdrawl/withdrawl_bg.png") no-repeat;
         background-size: cover;
-        padding: 6vw 0 13vw 0;
+        padding: 6vw 0 12vw 0;
         @media screen and (max-device-width: 768px){
             padding: 4.56vw 0 15vw 0;
         }
@@ -86,6 +116,7 @@
             @media screen and (max-device-width: 768px){
                 transform: scale(1.4);
                 margin: 10vw 14vw;
+                padding-bottom: 5vw;
             }
             width: 70vw;
             margin: 0 auto;
@@ -188,20 +219,20 @@
         .styles{
             background: url("../../../assets/images/home/withdrawl/styles.png") no-repeat;
             background-size: cover;
-            width: 70vw;
+            width: 100vw;
             height: 39.84vw;
             position: relative;
             color: #ffffff;
             padding-top: 10.16vw;
             @media screen and (min-device-width: 768px){
-                margin: 3vw 16vw 4.07vw;
+                margin: 7vw 0 0;
             }
             @media screen and (max-device-width: 768px){
                 transform: scale(1.2);
-                margin: 10vw 10vw 20vw;
+                margin: -5vw 0 4vw;
             }
             .styleTitle{
-                margin-left: 7.81vw;
+                margin-left: 22.81vw;
                 @media screen and (min-device-width: 768px){
                     font-size: 2.08vw;
                 }
@@ -211,23 +242,23 @@
                 margin-bottom: 1.88vw;
             }
             .styleText{
-                margin-left: 7.81vw;
+                margin-left: 22.81vw;
                 @media screen and (min-device-width: 768px){
                     font-size: 1.46vw;
                 }
                 @media screen and (max-device-width: 768px){
                     font-size: 2vw;
                 }
-                width: 70%;
+                width: 50vw;
                 display: block;
             }
             .styleImg{
                 position: absolute;
-                bottom: -10.1vw;
-                left: 2vw;
-                width: 79vw;
+                bottom: -2vw;
+                left: 20vw;
+                width: 60vw;
                 @media screen and (max-device-width: 768px){
-                    bottom: -20vw;
+                    bottom: -7vw;
                 }
                 li{
                     width: 15.6vw;

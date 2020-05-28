@@ -63,7 +63,7 @@ export default {
     strongText1: 'The platform has established a global network and integrated emerging technologies to continuously optimize security, performance and reliability. Enhance the network experience of players, background management and other parties.',
     strongText2: 'The mobile threat defense system is built in the front-end to ensure the security of the front-end environment. High protection computer room protects server and database from any intrusion.',
     strongText3: 'Support the odds control of single event, single play method, single board port and single player. The enterprise can independently control the odds trend according to the operation demand and the ability to handle the board.',
-    strongText4: 'Under the intelligent system, the ratio comparison calculation of single board and port, the early warning of the risk of the event being injected, the comprehensive audit and control... All-round reduce any economic loss risk that the enterprise may suffer.',
+    strongText4: 'Under the intelligence of the system, the single disc odds comparison operation, event risk warning, unique user risk judgment mechanism, withdrawal comprehensive audit and control... All-round reduce any risk that the enterprise may be exposed to.',
     strongText5: 'The real-time statistics and analysis of the operation status, the number of players, the profit and loss of investment, the capital status, and the competition situation are clear at a glance. Provide important basis for leadership decision-making.',
     strongText6: 'Provide product development, API services, SDK services, and fully support Android, IOS, H5, and PC.',
     strongText7: 'We provide customized services according to the needs of enterprises. Each enterprise is equipped with an after-sales service manager + a technical director + a product manager + an operation assistance + a customer service specialist. Provide all-round guidance for platform construction, operation, demand formulation and technical issues.',
@@ -74,5 +74,13 @@ export default {
     extendLiTitle3: 'Friend push model',
     extendLiText1: 'Unlimited levels and corresponding split proportion of each level',
     extendLiText2: 'Exclusive links and premium',
-    extendLiText3: 'Two way gift and first day share'
+    extendLiText3: 'Two way gift and first day share',
+	businessTitle1: 'Business Cooperation',
+	businessTitle2: 'Easy Website Building',
+	Step1: 'demand negotiation',
+	Step2: 'sign the agreement',
+	Step3: 'develop and build a station',
+	Step4: 'site deployment',
+	Step5: 'online operation',
+	Step6: 'continuous optimization'
 }

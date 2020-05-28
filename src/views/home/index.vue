@@ -19,7 +19,7 @@
         <!--提现-->
         <Withdrawl />
         <!--广告图-->
-        <BgsImg />
+        <!--<BgsImg />-->
         <!--联系我们-->
         <Contact />
     </div>
@@ -31,11 +31,11 @@
     import Plays from './components/plays'
     import Platform from './components/platform'
     import Media from './components/media'
-    import StrongSec from './components/strong'
+    import StrongSec from './components/strongSec'
     import Extend from './components/extend'
     import Recharge from './components/recharge'
     import Withdrawl from './components/withdrawl'
-    import BgsImg from './components/bgsImg'
+    // import BgsImg from './components/bgsImg'
     import Contact from './components/contact'
     export default {
         name: "index",
@@ -49,7 +49,7 @@
             Extend,
             Recharge,
             Withdrawl,
-            BgsImg,
+            // BgsImg,
             Contact
         },
         data() {
