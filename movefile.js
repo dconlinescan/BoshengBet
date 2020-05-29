@@ -1,3 +1,4 @@
+// 将dist目录下的文件移动到根目录，webpack不支持打包在根目录，只能用nodejs移动
 var fs = require('fs');
 var path = require('path');
 var distDir = path.join(__dirname, "dist");
