@@ -66,9 +66,9 @@ function fileDisplay(filePath) {
 }
 
 function deleteDist() {
-	// deleteall('./css');
-	// deleteall('./js');
-	// deleteall('./img');
+	deleteall('./css');
+	deleteall('./js');
+	deleteall('./img');
 	fileDisplay(distDir);
 }
 

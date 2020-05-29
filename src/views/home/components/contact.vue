@@ -55,6 +55,7 @@
                     <img src="~@/assets/images/home/contact/step3.png" alt="">
                     <p>{{ $t('step3') }}</p>
                 </li>
+
                 <br />
                 <li>
                     <img src="~@/assets/images/home/contact/step6.png" alt="">
