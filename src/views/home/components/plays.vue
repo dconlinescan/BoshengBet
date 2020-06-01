@@ -22,8 +22,8 @@
                     </ul>
                 </swiper-slide>
             </swiper>
-            <div class="swiper-button-prev" @click="refs.playsSwiper.slidePrev()" slot="button-prev"></div>
-            <div class="swiper-button-next" @click="refs.playsSwiper.slideNext()" slot="button-next"></div>
+            <div class="swiper-button-prev" @click="$refs.playsSwiper.slidePrev()" slot="button-prev"></div>
+            <div class="swiper-button-next" @click="$refs.playsSwiper.slideNext()" slot="button-next"></div>
         </div>
     </div>
 </template>
@@ -119,7 +119,7 @@
                 font-size: 1.45vw;
                 line-height: 3vw;
             }
-            @media screen and (max-device-width: 768px){
+            @media screen and (max-device-width: 767px){
                 font-size: 2vw;
                 line-height: 4vw;
             }
@@ -139,7 +139,7 @@
                     width: 3.33vw;
                     height: 3.33vw;
                 }
-                @media screen and (max-device-width: 768px){
+                @media screen and (max-device-width: 767px){
                     width: 5vw;
                     height: 5vw;
                 }
@@ -149,7 +149,7 @@
                 @media screen and (min-device-width: 768px){
                     right: -3vw;
                 }
-                @media screen and (max-device-width: 768px){
+                @media screen and (max-device-width: 767px){
                     right: -6vw;
                     margin-top: -2vw;
                 }
@@ -159,7 +159,7 @@
                 @media screen and (min-device-width: 768px){
                     left: -3vw;
                 }
-                @media screen and (max-device-width: 768px){
+                @media screen and (max-device-width: 767px){
                     left: -6vw;
                     margin-top: -2vw;
                 }
@@ -178,6 +178,13 @@
                     &:nth-child(2){
                         width: 28.54vw;
                     }
+
+                    @media screen and (min-device-width: 768px){
+                        transition: transform 0.5s;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
                     img{
                         width: 3.15vw;
                         margin-top: 2.5vw;
@@ -188,7 +195,7 @@
                         font-weight: 500;
                         color: rgba(255,255,255,1);
                         line-height: 1.5vw;
-                        @media screen and (max-device-width: 768px){
+                        @media screen and (max-device-width: 767px){
                             font-size: 2vw;
                             line-height: 1.7vw;
                         }

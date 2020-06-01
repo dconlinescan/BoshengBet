@@ -72,7 +72,7 @@
         p.title{
             color: #ffffff;
             margin-top: 5vw;
-            @media screen and (max-device-width: 768px){
+            @media screen and (max-device-width: 767px){
                 margin-bottom: 8vw;
             }
         }
@@ -80,7 +80,7 @@
             width:68.42vw;
             margin: 1.14vw auto;
             position: relative;
-            @media screen and (max-device-width: 768px){
+            @media screen and (max-device-width: 767px){
                 transform: scale(1.4);
                 margin: 10vw auto 5vw;
             }

@@ -112,7 +112,7 @@
         @media screen and (min-device-width: 768px){
             /*height: 20vw;*/
         }
-        @media screen and (max-device-width: 768px){
+        @media screen and (max-device-width: 767px){
             /*height: 30vw;*/
         }
         background: linear-gradient(#080f1f, #0E0829);

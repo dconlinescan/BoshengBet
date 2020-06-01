@@ -6,7 +6,7 @@
 
 <script>
 import HOME from './views/home'
-
+import animate from 'animate.css'
 export default {
     name: 'App',
     components: {

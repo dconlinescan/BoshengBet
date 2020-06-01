@@ -61,13 +61,13 @@
             width: 65vw;
             text-align: center;
             margin: 0 auto 4.3vw;
-            @media screen and (max-device-width: 768px){
+            @media screen and (max-device-width: 767px){
                 transform: scale(1.5);
                 margin: 2vw auto 6vw;
             }
         }
         .content{
-            @media screen and (max-device-width: 768px){
+            @media screen and (max-device-width: 767px){
                 transform: scale(1.3);
             }
             text-align: center;

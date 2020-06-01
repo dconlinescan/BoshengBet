@@ -78,7 +78,7 @@
         @media screen and (min-device-width: 768px){
             height: 3vw;
         }
-        @media screen and (max-device-width: 768px){
+        @media screen and (max-device-width: 767px){
             height: 8vw;
         }
         min-height: 0.3rem;
@@ -88,7 +88,7 @@
             @media screen and (min-device-width: 768px){
                 width: 62.5vw;
             }
-            @media screen and (max-device-width: 768px){
+            @media screen and (max-device-width: 767px){
                 width: 100vw;
             }
             position: relative;
@@ -104,7 +104,7 @@
                         top: 0;
                         left: 0;
                     }
-                    @media screen and (max-device-width: 768px){
+                    @media screen and (max-device-width: 767px){
                         width: 20vw;
                         top: 1vw;
                         left: 5vw;
@@ -124,7 +124,7 @@
                     border-radius: 0.855vw;
                     top: 1.1vw;
                 }
-                @media screen and (max-device-width: 768px){
+                @media screen and (max-device-width: 767px){
                     width: 30vw;
                     height: 8vw;
                     border-radius: 1.025vw;
@@ -135,7 +135,7 @@
                         width: 7.182vw;
                         min-width: 1rem;
                     }
-                    @media screen and (max-device-width: 768px){
+                    @media screen and (max-device-width: 767px){
                         width: 20vw;
                     }
                     li{
@@ -149,7 +149,7 @@
                         @media screen and (min-device-width: 768px){
                             font-size: 0.8vw;
                         }
-                        @media screen and (max-device-width: 768px){
+                        @media screen and (max-device-width: 767px){
                             font-size: 4vw;
                         }
                         &:nth-child(3){
