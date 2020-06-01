@@ -76,10 +76,10 @@ export default {
     extendLiText3: 'Two way gift and first day share',
 	businessTitle1: 'Business Cooperation',
 	businessTitle2: 'Easy Website Building',
-	Step1: 'demand negotiation',
-	Step2: 'sign the agreement',
-	Step3: 'develop and build a station',
-	Step4: 'site deployment',
-	Step5: 'online operation',
-	Step6: 'continuous optimization'
+	step1: 'Negotiation',
+	step2: 'Sign Agreement',
+	step3: 'Develop & Build',
+	step4: 'Deployment',
+	step5: 'Online',
+	step6: 'Optimization'
 }
