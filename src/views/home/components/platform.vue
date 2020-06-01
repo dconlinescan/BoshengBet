@@ -53,7 +53,7 @@
                 width: 48vw;
                 margin-left: 5vw;
             }
-            @media screen and (max-device-width: 768px){
+            @media screen and (max-device-width: 767px){
                 display: block;
                 margin: 12vw auto 6vw;
                 background-position: center center;
@@ -68,7 +68,7 @@
                 font-size: 1.6vw;
                 margin-right: 5vw;
             }
-            @media screen and (max-device-width: 768px){
+            @media screen and (max-device-width: 767px){
                 display: block;
                 margin: 2vw auto 5vw;
                 width: 90vw;
@@ -100,7 +100,7 @@
                         &.icon-3{
                             background-image: url("../../../assets/images/home/platform/3.png");
                         }
-                        @media screen and (max-device-width: 768px){
+                        @media screen and (max-device-width: 767px){
                             transform: scale(1.6);
                             margin-top: 1.5vw;
                         }
@@ -110,7 +110,7 @@
                         @media screen and (min-device-width: 768px){
                             width: 36vw;
                         }
-                        @media screen and (max-device-width: 768px){
+                        @media screen and (max-device-width: 767px){
                             width: 85vw;
                             line-height: 4vw;
                         }

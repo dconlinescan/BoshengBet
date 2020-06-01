@@ -10,16 +10,14 @@
         <Platform />
         <!--动画视频直播-->
         <Media />
+        <!--风格-->
+        <Styles />
         <!--强大-->
         <StrongSec />
         <!--代理模式-->
         <Extend />
-        <!--充值方式-->
+        <!--充值.提现-->
         <Recharge />
-        <!--提现-->
-        <Withdrawl />
-        <!--广告图-->
-        <!--<BgsImg />-->
         <!--联系我们-->
         <Contact />
     </div>
@@ -31,11 +29,10 @@
     import Plays from './components/plays'
     import Platform from './components/platform'
     import Media from './components/media'
+    import Styles from './components/styles'
     import StrongSec from './components/strongSec'
     import Extend from './components/extend'
     import Recharge from './components/recharge'
-    import Withdrawl from './components/withdrawl'
-    // import BgsImg from './components/bgsImg'
     import Contact from './components/contact'
     export default {
         name: "index",
@@ -45,11 +42,10 @@
             Plays,
             Platform,
             Media,
+	        Styles,
             StrongSec,
             Extend,
             Recharge,
-            Withdrawl,
-            // BgsImg,
             Contact
         },
         data() {
@@ -68,7 +64,7 @@
             font-size: 2.08vw;
             line-height: 3.2vw;
         }
-        @media screen and (max-device-width: 768px){
+        @media screen and (max-device-width: 767px){
             font-size: 5vw;
             line-height: 7vw;
         }
