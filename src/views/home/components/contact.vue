@@ -71,8 +71,8 @@
                     <p>{{ $t('step4') }}</p>
                 </li>
             </ul>
-            <p class="downTitle">{{ $t('downloadData') }} {{ $t('knowMore') }}</p>
-            <a class="downloadBtn" href="/G-Winner_manual.pdf" download="博胜体育_产品手册.pdf">{{ $t('download') }}</a>
+            <p class="downTitle">{{ $t('knowMore') }}</p>
+            <a class="downloadBtn" href="/G-Winner_manual.pdf" target="_blank">{{ $t('download') }}</a>
             <ul class="contactType">
                 <li>
                     <i class="contactIcon icon-telegram"></i>
