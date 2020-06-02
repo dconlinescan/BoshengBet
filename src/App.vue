@@ -15,8 +15,8 @@ export default {
     beforeMount() {
         if (!localStorage.getItem('LANG')) {
             localStorage.setItem('LANG', this.getLang())
-
         }
+        localStorage.setItem('isPC', this.IsPC())
         document.title = this.$t('title')
     },
     mounted() {
@@ -51,6 +51,20 @@ export default {
             } else {
                 return 'en'
             }
+        },
+	    IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
         }
     }
 }

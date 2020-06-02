@@ -3,9 +3,9 @@
         <div class="platform-text" :style="lang==='en'?'paddingTop: 0; marginTop: -3vw':''">
             <p class="title">{{ $t('platformTitle') }}</p>
             <ul>
-                <li><i class="icon-1"></i><span>{{ $t('platformText2') }}</span></li>
-                <li><i class="icon-2"></i><span>{{ $t('platformText3') }}</span></li>
-                <li><i class="icon-3"></i><span>{{ $t('platformText4') }}</span></li>
+                <li><i class="icon-1"></i><span>{{ isPC ? $t('platformText2') : $t('platformText2_wap') }}</span></li>
+                <li><i class="icon-2"></i><span>{{ isPC ? $t('platformText3') : $t('platformText3_wap') }}</span></li>
+                <li><i class="icon-3"></i><span>{{ isPC ? $t('platformText4') : $t('platformText4_wap') }}</span></li>
             </ul>
         </div>
         <div class="platform-img" :style="'background-image: url('+ platform.img[lang] +');'"></div>
@@ -33,7 +33,14 @@
         computed: {
             lang() {
                 return localStorage.getItem('LANG')
-            }
+            },
+	        isPC() {
+		        if (localStorage.getItem('isPC') === 'true') {
+			        return true
+		        } else {
+			        return false
+		        }
+	        }
         },
     }
 </script>

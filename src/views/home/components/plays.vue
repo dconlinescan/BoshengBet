@@ -120,7 +120,7 @@
                 line-height: 3vw;
             }
             @media screen and (max-device-width: 767px){
-                font-size: 2vw;
+                font-size: 3vw;
                 line-height: 4vw;
             }
         }
@@ -128,6 +128,10 @@
             width: 60.5vw;
             margin: 4vw auto 6vw;
             position: relative;
+            @media screen and (max-device-width: 767px){
+                transform: scale(1.3);
+                margin: 5vw auto 7vw;
+            }
             .swiper-button-next,.swiper-button-prev{
                 outline:none;
                 background-repeat: no-repeat;

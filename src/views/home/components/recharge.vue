@@ -1,26 +1,31 @@
 <template>
     <div class="recharge">
-        <p class="title">{{ $t('rechargeTitle') }} {{ $t('withdrawlTitle') }}</p>
+        <p class="title">{{ $t('rechargeTitle') }} <br v-if="!isPC && lang === 'en'" /> {{ $t('withdrawlTitle') }}</p>
         <ul class="content">
             <li v-for="i in 3" :key="i">
                 <i :class="'icon-recharge' + i"></i>
                 <p class="contTitle">{{ rechargeNum[i-1] }}{{ $t('recharge' + (i+1) + '_1') }}</p>
-                <p class="contText" v-html="$t('recharge' + (i+1) + '_2')"></p>
+                <template v-if="isPC">
+                    <p class="contText" v-html="$t('recharge' + (i+1) + '_2')"></p>
+                </template>
+                <template v-else>
+                    <p class="contText" v-html="$t('recharge' + (i+1) + '_2_wap')"></p>
+                </template>
             </li>
             <li>
                 <i class="icon-lamp"></i>
                 <p class="contTitle">{{ $t('lampTitle') }}</p>
-                <p class="contText">{{ $t('lampText') }}</p>
+                <p class="contText">{{ isPC ? $t('lampText') : $t('lampText_wap') }}</p>
             </li>
             <li>
                 <i class="icon-lock"></i>
                 <p class="contTitle">{{ $t('lockTitle') }}</p>
-                <p :style="lang==='en'?'line-height: 1.5vw;':''" class="contText">{{ $t('lockText') }}</p>
+                <p :style="lang==='en'?'line-height: 1.5vw;':''" class="contText">{{ isPC ? $t('lockText') : $t('lockText_wap') }}</p>
             </li>
             <li>
                 <i class="icon-clock"></i>
                 <p class="contTitle">{{ $t('clockTitle') }}</p>
-                <p class="contText">{{ $t('clockText') }}</p>
+                <p class="contText">{{ isPC ? $t('clockText') : $t('clockText_wap') }}</p>
             </li>
         </ul>
     </div>
@@ -31,12 +36,20 @@
         name: "recharge",
         data() {
             return{
-                rechargeNum: [50,650,15]
+                rechargeNum: [50,650,15],
+                rechargeNumWap: ['>50', '>650', '>15']
             }
         },
         computed: {
             lang() {
                 return localStorage.getItem('LANG')
+            },
+	        isPC() {
+            	if (localStorage.getItem('isPC') === 'true') {
+            		return true
+                } else {
+            		return false
+                }
             }
         },
     }
@@ -152,8 +165,8 @@
                         width: 11vw;
                     }
                     @media screen and (max-device-width: 767px){
-                        font-size: 1.68vw;
-                        line-height: 2vw;
+                        font-size: 2.5vw;
+                        line-height: 3vw;
                         width: 20vw;
                     }
                 }

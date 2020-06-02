@@ -1,15 +1,11 @@
 <template>
     <div class="media">
-        <p class="title">{{$t('mediaTitle')}}</p>
+        <p class="title" v-html="isPC ? $t('mediaTitle') : $t('mediaTitle_wap')"></p>
         <div class="content">
-            <img :src="media.img1[lang]" alt="">
-            <img :src="media.img2[lang]" alt="">
-            <p :class="lang==='en'?'isEn':''" :style="lang==='en'?'line-height: 1.5vw;':''">{{ $t('mediaText1') }}</p>
-        </div>
-        <div class="content">
-            <img :src="media.img3[lang]" alt="">
-            <img :src="media.img4[lang]" alt="">
-            <p :style="lang==='en'?'line-height: 1.5vw;':''">{{ $t('mediaText2') }}</p>
+            <div v-if="!playerHide && isPC" @click.stop="startMedia" class="video-img"></div>
+            <video @click.stop="clickVideo()" id="myVideo" ref="myVideo" src="/video/Gwinner.mp4" controls="controls" poster="~@/assets/images/home/media/G-winner.png">
+                您的浏览器不支持 video 标签。
+            </video>
         </div>
     </div>
 </template>
@@ -52,14 +48,40 @@
                         en: media4En,
                         tw: media4Tw
                     },
-                }
+                },
+	            playerHide: false
             }
         },
         computed: {
             lang() {
                 return localStorage.getItem('LANG')
-            }
+            },
+	        isPC() {
+		        if (localStorage.getItem('isPC') === 'true') {
+			        return true
+		        } else {
+			        return false
+		        }
+	        }
         },
+        mounted() {
+        },
+        methods: {
+	        startMedia() {
+	        	this.playerHide = true
+		        this.$refs.myVideo.play();
+            },
+	        clickVideo() {
+	        	let video = document.getElementById('myVideo')
+		        if (!video.paused) {
+			        video.play();
+			        this.playerHide = false
+		        } else {
+			        video.pause();
+			        this.playerHide = true
+		        }
+            }
+        }
     }
 </script>
 
@@ -77,6 +99,22 @@
             }
         }
         .content{
+            position: relative;
+            video{
+                outline:none;
+                width: 100%;
+            }
+            .video-img {
+                position: absolute;
+                top: calc(50% - 3vw);
+                left: calc(50% - 3vw);
+                width: 6vw;
+                height: 6vw;
+                z-index: 999;
+                background: url('~@/assets/images/home/media/play-button.png') no-repeat;
+                background-size: 6vw;
+                cursor: pointer
+            }
             width:68.42vw;
             margin: 1.14vw auto;
             position: relative;

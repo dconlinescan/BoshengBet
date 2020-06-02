@@ -1,20 +1,6 @@
 <template>
     <div class="contact">
-        <!--<div class="content">-->
-            <!--<div class="content_lf">-->
-                <!--<p class="lf_text">{{ $t('downloadData') }}</p>-->
-                <!--<p class="lf_text">{{ $t('knowMore') }}</p>-->
-                <!--<a class="downloadBtn" href="#">{{ $t('download') }}</a>-->
-                <!--<p class="copyright">{{ $t('copyright') }}</p>-->
-            <!--</div>-->
-            <!--<div class="content_rt">-->
-                <!--<p class="rt_title">{{ $t('cooperation') }}</p>-->
-                <!--<p class="rt_text">telegram: @hengbobet</p>-->
-                <!--<p class="rt_text">WhatsApp{{ $t('whatsApp') }}: +63 945 197 0194</p>-->
-                <!--<p class="rt_text">{{ $t('phone') }}: +63 945 197 0194</p>-->
-            <!--</div>-->
-        <!--</div>-->
-        <p class="title"><span>{{ $t('businessTitle1') }}</span><span>{{ $t('businessTitle2') }}</span></p>
+        <p class="title"><span>{{ $t('businessTitle1') }}</span><br v-if="!isPC && lang === 'en'" /><span>{{ $t('businessTitle2') }}</span></p>
         <div class="content">
             <ul class="stepUl">
                 <li>
@@ -100,7 +86,14 @@
         computed: {
             lang() {
                 return localStorage.getItem('LANG')
-            }
+            },
+	        isPC() {
+		        if (localStorage.getItem('isPC') === 'true') {
+			        return true
+		        } else {
+			        return false
+		        }
+	        }
         },
     }
 </script>
@@ -170,6 +163,11 @@
                     position: relative;
                     margin-right: 100px;
                     margin-bottom: 2vw;
+                    img{
+                        display: block;
+                        width: 120px;
+                        height: 139px;
+                    }
                     &:after {
                         content: '';
                         background-image: url("~@/assets/images/home/contact/stepLine1.png");
@@ -185,7 +183,7 @@
                     p {
                         margin-top: 22px;
                         color: #FFFFFF;
-                        font-size: 2vw;
+                        font-size: 2.5vw;
                     }
                     &:last-child {
                         margin-right: unset;
@@ -199,7 +197,7 @@
                             background-image: url("~@/assets/images/home/contact/stepLine2.png");
                             width: 80px;
                             height: 210px;
-                            top: 40%;
+                            top: 32%;
                             background-size: contain;
                         }
                     }
