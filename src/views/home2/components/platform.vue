@@ -112,10 +112,10 @@
                 color: #ffffff;
                 @media screen and (min-device-width: 768px) {
                     top: 10.16vw;
-                    width: 10.31vw;
-                    height: 11.9vw;
+                    width: 10.01vw;
+                    height: 12.1vw;
                     font-size: 0.94vw;
-                    padding: 3.8vw 1.5vw 0;
+                    padding: 3.2vw 1.5vw 0 1.8vw;
                 }
                 @media screen and (max-device-width: 767px) {
                     top: 1vw;
