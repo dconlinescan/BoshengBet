@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import HOME from './views/home'
-import animate from 'animate.css'
+import HOME from './views/home2'
+
 export default {
     name: 'App',
     components: {
@@ -75,6 +75,6 @@ export default {
     #app{
         overflow: hidden;
         font-size: 0;
-        background: #000;
+        background: #ffffff;
     }
 </style>

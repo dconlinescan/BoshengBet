@@ -28,11 +28,11 @@ export default {
     plays_fh: 'Hockey',
     platformTitle: 'Professional Sports Guessing Platform',
     platformText2: 'Gwinner cooperate with CROWN, BVETVICTOR and Bet365,by special operation mechanism.Output the best&highest Odds',
-	platformText2_wap: 'Cooperate with CROWN, BVETVICTOR and Bet365.Output the best&highest Odds',
+	platformText2_wap: 'Cooperate with multiple platforms',
     platformText3: 'Covering sports events all over the world, more than 1000 games a day are optional for players',
-	platformText3_wap: 'More than 1000 matches each day around the world',
+	platformText3_wap: 'More than 1000 matches',
     platformText4: 'There are more than 120 kinds of playing methods, such as MoneyLine, O/U, O/E, Goal, Special, Parlay, etc',
-	platformText4_wap: 'MoneyLine,Handicap,O/U,etc. More than 120 betting way',
+	platformText4_wap: 'More than 120 betting way',
     mediaTitle: 'The Most Complete and Least Delayed Live. Playing and Watching',
 	mediaTitle_wap: 'HD Live & Animation' +
 		'<br />' +
