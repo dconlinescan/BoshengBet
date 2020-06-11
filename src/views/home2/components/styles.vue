@@ -2,7 +2,7 @@
     <div class="styles">
         <p class="title">{{ $t('styleTitle') }}</p>
         <ul class="styleImg">
-            <li :class="isAnmate ? 'animate__wobble animate__animated' : ''" v-for="(item, index) in styles[lang]" :key="index">
+            <li :class="isAnmate ? item.class : ''" v-for="(item, index) in styles[lang]" :key="index">
                 <img :src="item.img" alt="">
                 <div v-if="isPC" class="videoBox">
                     <img class="videoImg" src="~@/assets/images/home/styles/Gwinner-phone.png" alt="">
@@ -34,51 +34,60 @@
 						{
 							img: WhiteStylecn,
 							name: 'whiteColor',
-                            video: 'whiteCn'
+                            video: 'whiteCn',
+                            class: 'animate__fadeInLeft animate__animated'
 						},
 						{
 							img: BlueStylecn,
 							name: 'blueColor',
-							video: 'blueCn'
+							video: 'blueCn',
+							class: 'animate__fadeInUp animate__animated'
 						},
 						{
 							img: GoldenStylecn,
 							name: 'goldenColor',
-							video: 'goldenCn'
+							video: 'goldenCn',
+							class: 'animate__fadeInRight animate__animated'
 						}
 					],
 					en: [
 						{
 							img: WhiteStyleen,
 							name: 'whiteColor',
-							video: 'whiteCn'
+							video: 'whiteCn',
+							class: 'animate__fadeInLeft animate__animated'
 						},
 						{
 							img: BlueStyleen,
 							name: 'blueColor',
-							video: 'blueCn'
+							video: 'blueCn',
+							class: 'animate__fadeInUp animate__animated'
 						},
 						{
 							img: GoldenStyleen,
 							name: 'goldenColor',
-							video: 'goldenCn'
+							video: 'goldenCn',
+							class: 'animate__fadeInRight animate__animated'
 						}
 					],
 					tw: [
 						{
 							img: WhiteStyletw,
 							name: 'whiteColor',
-							video: 'whiteCn'
+							video: 'whiteCn',
+							class: 'animate__fadeInLeft animate__animated'
 						},
 						{
 							img: BlueStyletw,
 							name: 'blueColor',
-							video: 'blueCn'
+							video: 'blueCn',
+							class: 'animate__fadeInUp animate__animated'
 						},
 						{
 							img: GoldenStyletw,
 							name: 'goldenColor',
-							video: 'goldenCn'
+							video: 'goldenCn',
+							class: 'animate__fadeInRight animate__animated'
 						}
 					]
 				},
