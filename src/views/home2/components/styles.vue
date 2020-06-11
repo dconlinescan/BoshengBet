@@ -2,7 +2,7 @@
     <div class="styles">
         <p class="title">{{ $t('styleTitle') }}</p>
         <ul class="styleImg">
-            <li :class="isAnmate ? 'wobble animated' : ''" v-for="(item, index) in styles[lang]" :key="index">
+            <li :class="isAnmate ? 'animate__wobble animate__animated' : ''" v-for="(item, index) in styles[lang]" :key="index">
                 <img :src="item.img" alt="">
                 <div v-if="isPC" class="videoBox">
                     <img class="videoImg" src="~@/assets/images/home/styles/Gwinner-phone.png" alt="">

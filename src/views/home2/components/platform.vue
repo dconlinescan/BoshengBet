@@ -4,9 +4,9 @@
         <div class="platformContent">
             <img class="platform4" :src="platform4" alt="">
             <template v-if="isAnmate">
-                <div class="platform1 fadeInLeft animated">{{ isPC ? $t('platformText2') : $t('platformText2_wap') }}</div>
-                <div class="platform2 fadeInUp animated">{{ isPC ? $t('platformText3') : $t('platformText3_wap') }}</div>
-                <div class="platform3 fadeInRight animated">{{ isPC ? $t('platformText4') : $t('platformText4_wap') }}</div>
+                <div class="platform1 animate__fadeInLeft animate__animated">{{ isPC ? $t('platformText2') : $t('platformText2_wap') }}</div>
+                <div class="platform2 animate__fadeInUp animate__animated">{{ isPC ? $t('platformText3') : $t('platformText3_wap') }}</div>
+                <div class="platform3 animate__fadeInRight animate__animated">{{ isPC ? $t('platformText4') : $t('platformText4_wap') }}</div>
             </template>
         </div>
         <div class="clear"></div>
