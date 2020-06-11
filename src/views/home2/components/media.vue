@@ -8,27 +8,27 @@
             </div>
             <div class="mediaBar">
                 <template v-if="isPC">
-                    <div class="media1" :class="anima ? 'media1Playing' : ''">
-                        <div v-if="!anima" class="video-full" @click="fullScreen('media1')"></div>
-                        <div v-if="player1Hide && isPC" @click.stop="startMedia('media1')" class="video-img"></div>
-                        <video @click.stop="clickVideo('media1')" id="media1" ref="media1" src="/video/Gwinner2.mp4" poster="~@/assets/images/home2/media/video1.png">
-                            您的浏览器不支持 video 标签。
-                        </video>
-                    </div>
-                    <div class="media2" :class="anima ? 'media2Playing' : ''">
-                        <div v-if="anima" class="video-full" @click="fullScreen('media2')"></div>
-                        <div v-if="player2Hide && isPC" @click.stop="startMedia('media2')" class="video-img"></div>
-                        <video @click.stop="clickVideo('media2')" id="media2" ref="media2" src="/video/Gwinner.mp4" poster="~@/assets/images/home2/media/video2.png">
-                            您的浏览器不支持 video 标签。
-                        </video>
-                    </div>
+                    <!--<div class="media1" :class="anima ? 'media1Playing' : ''">-->
+                        <!--<div v-if="!anima" class="video-full" @click="fullScreen('media1')"></div>-->
+                        <!--<div v-if="player1Hide && isPC" @click.stop="startMedia('media1')" class="video-img"></div>-->
+                        <!--<video @click.stop="clickVideo('media1')" id="media1" ref="media1" src="/video/Gwinner2.mp4" poster="~@/assets/images/home2/media/video1.png">-->
+                            <!--您的浏览器不支持 video 标签。-->
+                        <!--</video>-->
+                    <!--</div>-->
+                    <!--<div class="media2" :class="anima ? 'media2Playing' : ''">-->
+                        <!--<div v-if="anima" class="video-full" @click="fullScreen('media2')"></div>-->
+                        <!--<div v-if="player2Hide && isPC" @click.stop="startMedia('media2')" class="video-img"></div>-->
+                        <!--<video @click.stop="clickVideo('media2')" id="media2" ref="media2" src="/video/Gwinner.mp4" poster="~@/assets/images/home2/media/video2.png">-->
+                            <!--您的浏览器不支持 video 标签。-->
+                        <!--</video>-->
+                    <!--</div>-->
                 </template>
                 <template v-else>
-                    <div class="media3">
-                        <video id="media3" ref="media3" src="/video/Gwinner.mp4" controls="controls" poster="~@/assets/images/home2/media/video1.png">
-                            您的浏览器不支持 video 标签。
-                        </video>
-                    </div>
+                    <!--<div class="media3">-->
+                        <!--<video id="media3" ref="media3" src="/video/Gwinner.mp4" controls="controls" poster="~@/assets/images/home2/media/video1.png">-->
+                            <!--您的浏览器不支持 video 标签。-->
+                        <!--</video>-->
+                    <!--</div>-->
                 </template>
             </div>
         </div>
@@ -96,20 +96,20 @@
         	if (this.isPC) {
 		        let video1 = document.getElementById('media1')
 		        let video2 = document.getElementById('media2')
-		        video1.ontimeupdate = () => {
-			        if (!video1.paused) {
-				        this.player1Hide = false
-			        } else {
-				        this.player1Hide = true
-			        }
-		        }
-		        video2.ontimeupdate = () => {
-			        if (!video2.paused) {
-				        this.player2Hide = false
-			        } else {
-				        this.player2Hide = true
-			        }
-		        }
+		        // video1.ontimeupdate = () => {
+			    //     if (!video1.paused) {
+				//         this.player1Hide = false
+			    //     } else {
+				//         this.player1Hide = true
+			    //     }
+		        // }
+		        // video2.ontimeupdate = () => {
+			    //     if (!video2.paused) {
+				//         this.player2Hide = false
+			    //     } else {
+				//         this.player2Hide = true
+			    //     }
+		        // }
             }
         },
         watch: {
@@ -250,13 +250,18 @@
                 }
             }
             .mediaBar{
+                background-image: url("~@/assets/images/home2/media/G-winner.png");
+                background-size: contain;
+                background-repeat: no-repeat;
                 @media screen and (min-device-width: 768px) {
                     display: inline-block;
-                    background: #2F54EB;
+                    /*background: #2F54EB;*/
                     position: relative;
-                    left: 5.77vw;
+                    /*left: 5.77vw;*/
+                    left: 3.77vw;
                     top: 0;
-                    width: 44.25vw;
+                    /*width: 44.25vw;*/
+                    width: 48.25vw;
                     height: 26.05vw;
                 }
                 @media screen and (max-device-width: 767px) {
@@ -267,10 +272,13 @@
                     .media3{
                         width: 100%;
                         height: 100%;
-                        video{
-                            width: 100%;
-                            height: 100%;
-                        }
+                        background-image: url("~@/assets/images/home2/media/3_cn.jpg");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        /*video{*/
+                            /*width: 100%;*/
+                            /*height: 100%;*/
+                        /*}*/
                     }
                 }
                 .media1.media1Playing{
@@ -292,6 +300,9 @@
                     z-index: 11;
                     transition: all 1s;
                     overflow: hidden;
+                    background-image: url("~@/assets/images/home2/media/3_cn.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
                     &:hover{
                         .video-full{
                             display: block;
@@ -306,6 +317,9 @@
                     right: 0;
                     top: 5.1vw;
                     transition: all 1s;
+                    background-image: url("~@/assets/images/home2/media/1_cn.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
                     &:hover{
                         .video-full{
                             display: block;
