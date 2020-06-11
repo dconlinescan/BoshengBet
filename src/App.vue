@@ -72,6 +72,7 @@ export default {
 
 <style lang="less">
     @import "assets/style/base.less";
+    @import 'assets/style/animate.min.css';
     #app{
         overflow: hidden;
         font-size: 0;
