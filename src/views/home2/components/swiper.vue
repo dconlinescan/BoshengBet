@@ -46,7 +46,9 @@
 
     import 'swiper/css/swiper.css'
     import {swiper, swiperSlide} from 'vue-awesome-swiper'
+    import scroll from '@/mixins/scroll'
     export default {
+	    mixins: [scroll],
         components: {
             swiper,
             swiperSlide
@@ -81,9 +83,6 @@
             }
         },
         computed: {
-            lang() {
-                return localStorage.getItem('LANG')
-            },
             items() {
                 if (this.isWeb()) {
                     return [
@@ -108,7 +107,7 @@
                 const isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
                 const isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
                 const dWidth = window.screen.width;
-                if(isAndroid || isiOS || dWidth<768){
+                if(isAndroid || isiOS || dWidth < 768){
                     return false
                 }else{
                     return true

@@ -48,8 +48,10 @@
     import media2Tw from '@/assets/images/home/media/2_tw.jpg'
     import media3Tw from '@/assets/images/home/media/3_tw.jpg'
     import media4Tw from '@/assets/images/home/media/4_tw.jpg'
+    import scroll from '@/mixins/scroll'
     export default {
         name: "media",
+        mixins: [scroll],
         data() {
             return {
                 media: {
@@ -79,18 +81,6 @@
                 anima: false,
                 isFull: false
             }
-        },
-        computed: {
-            lang() {
-                return localStorage.getItem('LANG')
-            },
-	        isPC() {
-		        if (localStorage.getItem('isPC') === 'true') {
-			        return true
-		        } else {
-			        return false
-		        }
-	        }
         },
         mounted() {
         	if (this.isPC) {

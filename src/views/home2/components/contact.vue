@@ -2,6 +2,7 @@
     <div class="contact">
         <p class="title"><span>{{ $t('businessTitle1') }}</span><br v-if="!isPC && lang === 'en'" /><span>{{ $t('businessTitle2') }}</span></p>
         <div class="content">
+            <div class="gradient" :class="isAnmate ? 'move' : ''"></div>
             <ul class="stepUl">
                 <li>
                     <img src="~@/assets/images/home/contact/step1.png" alt="">
@@ -77,23 +78,29 @@
 </template>
 
 <script>
+	import scroll from '@/mixins/scroll'
     export default {
         name: "contact",
+        mixins: [scroll],
         data() {
-          return {}
+          return {
+	          isAnmate: false
+          }
         },
-        computed: {
-            lang() {
-                return localStorage.getItem('LANG')
-            },
-	        isPC() {
-		        if (localStorage.getItem('isPC') === 'true') {
-			        return true
-		        } else {
-			        return false
-		        }
+        mounted() {
+	        if (this.isPC) {
+		        window.addEventListener('scroll', () => {
+			        let{x, y} = this.getPageScroll();//对象的解构赋值——ES6新增
+			        //console.log(x, y);//答应水平与垂直方向的滚动距离
+			        let clientTop = document.getElementsByClassName('contact')[0].offsetTop - y; //元素距离浏览器可视区高度
+			        if (this.windowHeight - clientTop >= 100) {
+				        this.isAnmate = true
+			        } else {
+				        this.isAnmate = false
+			        }
+		        }, true)
 	        }
-        },
+        }
     }
 </script>
 
@@ -119,6 +126,26 @@
         }
         .content{
             text-align: center;
+            position: relative;
+            .gradient{
+                @media screen and (min-device-width: 768px) {
+                    z-index: 2;
+                    width: 120vw;
+                    height: 15vw;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: -20vw;
+                    background: linear-gradient(to left, #080f1f 0%, #080f1f 80%, rgba(8,15,31,0) 100%);
+                    &.move{
+                        left: 100vw;
+                        transition: left 2s;
+                    }
+                }
+                @media screen and (max-device-width: 767px){
+                    display: none;
+                }
+            }
             .stepUl{
                 @media screen and (max-device-width: 767px){
                     display: none;
@@ -127,6 +154,7 @@
                 li{
                     position: relative;
                     margin-right: 100px;
+                    height: 13.5vw;
                     &:after{
                         content: '';
                         background-image: url("~@/assets/images/home/contact/stepLine1.png");

@@ -34,7 +34,9 @@
     import wapLogoCn from '@/assets/images/home2/header/wap_logo_cn.png'
     import wapLogoEn from '@/assets/images/home2/header/wap_logo_en.png'
     import wapLogoTw from '@/assets/images/home2/header/wap_logo_tw.png'
+    import scroll from '@/mixins/scroll'
     export default {
+	    mixins: [scroll],
         name: "BgsHeader",
         data() {
             return {
@@ -53,15 +55,6 @@
             }
         },
         computed: {
-            lang() {
-	            switch (localStorage.getItem('LANG')) {
-		            case 'cn': this.langName = '简体中文';break;
-		            case 'tw': this.langName = '繁體中文';break;
-		            case 'en': this.langName = 'English';break;
-                    default: this.langName = '简体中文';break;
-	            }
-                return localStorage.getItem('LANG')
-            },
             logo() {
                 if(this.isWeb()) {
                     return this.webLogo
@@ -69,13 +62,6 @@
                     return this.wapLogo
                 }
             },
-	        isPC() {
-		        if (localStorage.getItem('isPC') === 'true') {
-			        return true
-		        } else {
-			        return false
-		        }
-	        },
         },
         created() {
         	document.onclick = (e)=>{
@@ -86,11 +72,6 @@
 			        this.langListShow = false
 		        }
 	        }
-	        // window.onclick = () => {
-		    //     if(this.langListShow) {
-			//         this.langListShow = false
-            //     }
-            // }
         },
         methods: {
             changeLang(lang) {

@@ -19,7 +19,8 @@
         <!--充值.提现-->
         <Recharge />
         <!--联系我们-->
-        <Contact />
+        <Contact id="contact" />
+        <a v-if="isPC" @click="scrollTo" class="serviceBtn"></a>
     </div>
 </template>
 
@@ -34,7 +35,9 @@
 	import Extend from './components/extend'
 	import Recharge from './components/recharge'
 	import Contact from './components/contact'
+	import scroll from '@/mixins/scroll'
 	export default {
+		mixins: [scroll],
 		name: "index",
 		components: {
 			BgsHeader,
@@ -49,15 +52,37 @@
 			Contact
 		},
 		data() {
-			return {}
+			return {
+				timer: null
+            }
 		},
-        watch: {
-
+        methods: {
+            scrollTo() {
+	            clearInterval(this.timer)
+	            this.timer = setInterval(() => {
+		            document.documentElement.scrollTop += 100
+		            if (document.documentElement.scrollTop >= document.documentElement.scrollHeight-this.windowHeight) {
+			            clearInterval(this.timer)
+		            }
+	            }, 20);
+            }
         }
 	}
 </script>
 
 <style lang="less">
+    .serviceBtn{
+        background-image: url("~@/assets/images/home2/service.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 72px;
+        height: 72px;
+        position: fixed;
+        bottom: 10%;
+        right: 20px;
+        z-index: 99;
+        cursor: pointer;
+    }
     p.title{
         position: relative;
         color: rgba(51,51,51,1);

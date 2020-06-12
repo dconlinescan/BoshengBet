@@ -12,8 +12,8 @@
                 <RotatePlays class="rotatePos right3" :size="'sm'" :prev="plays1.op" :next="plays2.cs" :timeOut="200" :isRotate="isRotate" />
                 <img class="playsBg" :src="PlaysBg" alt="">
             </div>
-            <div class="swiper-button-prev" @click="isRotate = false" slot="button-prev"></div>
-            <div class="swiper-button-next" @click="isRotate = true" slot="button-next"></div>
+            <div :class="isRotate ? 'animate__bounceIn' : 'animate__bounceOut'" class="swiper-button-prev animate__animated" @click="isRotate = false" slot="button-prev"></div>
+            <div  :class="!isRotate ? 'animate__bounceIn' : 'animate__bounceOut'" class="swiper-button-next animate__animated" @click="isRotate = true" slot="button-next"></div>
         </div>
     </div>
 </template>
@@ -46,7 +46,9 @@
     import icon_tn from '@/assets/images/home2/plays/icons/tn.png'
     import PlaysBg from '@/assets/images/home2/plays/plays_bg.png'
     import RotatePlays from '@/components/rotate'
+    import scroll from '@/mixins/scroll'
     export default {
+    	mixins: [scroll],
         name: "plays",
         components: {
             RotatePlays
@@ -71,14 +73,6 @@
                     cs: { bg: bg_cs, icon: icon_cs, text: this.$t('plays_cs')},
                     fh: { bg: bg_fh, icon: icon_fh, text: this.$t('plays_fh')}
                 }
-            }
-        },
-        mounted() {
-
-        },
-        computed: {
-            lang() {
-                return localStorage.getItem('LANG') || 'cn'
             }
         },
     }

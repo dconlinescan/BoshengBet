@@ -1,7 +1,7 @@
 <template>
     <div class="strongSec">
         <p class="title">{{ isPC ? $t('strongTitle') : $t('strongTitle_wap')}}</p>
-        <div class="strongSwip">
+        <div class="strongSwip" v-if="isAnmate" :class="isAnmate ? 'animate__fadeInLeft animate__animated' : ''">
             <swiper :options="swiperOption" ref="mySwiper">
                 <!-- slides -->
                 <swiper-slide v-for="index in 7" :key="index">
@@ -81,8 +81,10 @@
 <script>
 	import 'swiper/css/swiper.css'
 	import {swiper, swiperSlide} from 'vue-awesome-swiper'
+	import scroll from '@/mixins/scroll'
     export default {
         name: "strongSec",
+        mixins: [scroll],
 	    components: {
 		    swiper,
 		    swiperSlide
@@ -97,7 +99,6 @@
 		            speed: 2500,
 		            on: {
 			            init: function () {
-				            this.emit('transitionEnd');//在初始化时触发一次transitionEnd事件，需要先设置transitionEnd
 			            },
 		            },
 		            autoplay: {
@@ -116,8 +117,10 @@
 		            pagination: {
 			            el: '.swiper-pagination',
 		            },
+
                 },
-                hasShow: false
+                hasShow: false,
+	            isAnmate: false
             }
         },
         computed: {
@@ -136,45 +139,15 @@
 		    if (this.isPC) {
 			    window.addEventListener('scroll', () => {
 				    let{x, y} = this.getPageScroll();//对象的解构赋值——ES6新增
-				    //console.log(x, y);//答应水平与垂直方向的滚动距离
 				    let clientTop = document.getElementsByClassName('strongSec')[0].offsetTop - y; //元素距离浏览器可视区高度
-				    // if (clientTop <= 362) {
-				    // 	if (this.hasShow) return
-                    //     this.$set(this.swiperOption, 'speed', 10)
-					//     this.$set(this.swiperOption.autoplay, 'delay', 100)
-                    //     this.hasShow = true
-                    //     setTimeout(() => {
-                    //     	this.ref
-	                //         this.$set(this.swiperOption, 'speed', 2500)
-	                //         this.$set(this.swiperOption.autoplay, 'delay', 3000)
-                    //         console.log(this.swiperOption)
-                    //     }, 1400)
-				    // } else {
-					//     this.$set(this.swiperOption, 'speed', 2500)
-					//     this.$set(this.swiperOption.autoplay, 'delay', 3000)
-				    // }
+				    if (this.windowHeight - clientTop >= 300) {
+					    this.isAnmate = true
+				    } else {
+					    this.isAnmate = false
+				    }
 			    }, true)
 		    } else {
-			    this.swiperDelay = 3000
-		    }
-	    },
-	    methods: {
-		    getPageScroll() {//获取网页滚动距离的方法
-			    let x, y;
-			    if (window.pageXOffset){//查看有无pageXOffset属性：IE9以及IE9以上的浏览器
-				    x = window.pageXOffset;
-				    y = window.pageYOffset;
-			    }else if (document.compatMode ===  "BackCompat"){//混杂（怪异）模式下浏览器
-				    x = document.body.scrollLeft;
-				    y = document.body.scrollTop;
-			    }else {//标准模式下浏览器
-				    x = document.documentElement.scrollLeft;
-				    y = document.documentElement.scrollTop;
-			    }
-			    return {//返回水平距离、垂直距离
-				    x:x,
-				    y: y
-			    }
+			    this.isAnmate = true
 		    }
 	    }
     }
@@ -186,6 +159,12 @@
         width: 100%;
         background: #ffffff;
         padding-bottom: 1.92vw;
+        @media screen and (max-device-width: 767px) {
+            height: 94vw;
+        }
+        @media screen and (min-device-width: 768px) {
+            height: 29.28vw;
+        }
         .strongSwip{
             @media screen and (max-device-width: 767px) {
                 width: 90vw;

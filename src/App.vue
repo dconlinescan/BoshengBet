@@ -58,8 +58,9 @@ export default {
                 "SymbianOS", "Windows Phone",
                 "iPad", "iPod"];
             var flag = true;
+		    const dWidth = window.screen.width;
             for (var v = 0; v < Agents.length; v++) {
-                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0 || dWidth < 758) {
                     flag = false;
                     break;
                 }
