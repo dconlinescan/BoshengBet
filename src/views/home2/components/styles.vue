@@ -1,6 +1,7 @@
 <template>
     <div class="styles">
         <p class="title">{{ $t('styleTitle') }}</p>
+        <p class="playsText1">{{ $t('styleText') }}</p>
         <ul v-if="isAnmate" class="styleImg">
             <li :class="isAnmate ? item.class : ''" v-for="(item, index) in styles[lang]" :key="index">
                 <img :src="item.img" alt="">
@@ -126,11 +127,23 @@
 
 <style lang="less" scoped>
     .styles{
+        .playsText1{
+            color: #666666;
+            text-align: center;
+            @media screen and (min-device-width: 768px){
+                font-size: 1.144vw;
+                line-height: 3vw;
+            }
+            @media screen and (max-device-width: 767px){
+                font-size: 3vw;
+                line-height: 4vw;
+            }
+        }
         background: #ffffff;
         width: 100vw;
 
         @media screen and (max-device-width: 767px) {
-            height: 60vw;
+            height: 70vw;
         }
         @media screen and (min-device-width: 768px) {
             height: 41vw;

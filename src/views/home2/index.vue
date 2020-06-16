@@ -12,6 +12,8 @@
         <Media />
         <!--风格-->
         <Styles />
+        <!--多语言-->
+        <LangCont />
         <!--强大-->
         <StrongSec />
         <!--代理模式-->
@@ -35,12 +37,14 @@
 	import Extend from './components/extend'
 	import Recharge from './components/recharge'
 	import Contact from './components/contact'
+	import LangCont from './components/langs'
 	import scroll from '@/mixins/scroll'
 	export default {
 		mixins: [scroll],
 		name: "index",
 		components: {
 			BgsHeader,
+			LangCont,
 			SwiperSec,
 			Plays,
 			Platform,
@@ -110,6 +114,9 @@
             @media screen and (min-device-width: 768px) {
                 height: 3.2vw;
                 width: 3.38vw;
+                position: absolute;
+                top: 50%;
+                margin-top: -1.6vw;
             }
             @media screen and (max-device-width: 767px) {
                 height: 6vw;
@@ -127,6 +134,9 @@
                 background-position: top center;
                 left: -13vw;
             }
+            @media screen and (min-device-width: 768px) {
+                left: -5vw;
+            }
         }
         &:after{
             margin-left: 1.56vw;
@@ -135,6 +145,9 @@
                 background-size: 11vw 5vw;
                 background-position: top center;
                 right: -13vw;
+            }
+            @media screen and (min-device-width: 768px) {
+                right: -5vw;
             }
         }
     }

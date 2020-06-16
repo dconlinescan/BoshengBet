@@ -102,7 +102,7 @@
             height: 31vw;
         }
         @media screen and (max-device-width: 767px){
-            height: 50vw;
+            height: 65vw;
         }
         p.title{
             margin-bottom: 2.56vw;
