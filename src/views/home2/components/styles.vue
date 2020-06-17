@@ -4,7 +4,7 @@
         <p class="playsText1">{{ $t('styleText') }}</p>
         <ul v-if="isAnmate" class="styleImg">
             <li :class="isAnmate ? item.class : ''" v-for="(item, index) in styles[lang]" :key="index">
-                <img :src="item.img" alt="">
+                <img class="itImg" :src="item.img" alt="">
                 <div v-if="isPC" class="videoBox">
                     <img class="videoImg" src="~@/assets/images/home/styles/Gwinner-phone.png" alt="">
                     <video :src="'/video/'+ item.video +'.mov'" autoplay muted loop :poster="item.img">

@@ -1,5 +1,5 @@
 <template>
-    <div class="recharge">
+    <div class="recharge" :style="!isPC && lang === 'en' ? 'height: 65vw' : ''">
         <p class="title">{{ $t('rechargeTitle') }} <br v-if="!isPC && lang === 'en'" /> {{ $t('withdrawlTitle') }}</p>
         <span v-if="isAnmate" class="leftTitle animate__animated animate__fadeInLeft">{{ $t('rechargeTitle') }}</span>
         <span v-if="isAnmate" class="rightTitle animate__animated animate__fadeInRight">{{ $t('withdrawlTitle') }}</span>
@@ -102,7 +102,7 @@
             height: 31vw;
         }
         @media screen and (max-device-width: 767px){
-            height: 65vw;
+            height: 52vw;
         }
         p.title{
             margin-bottom: 2.56vw;

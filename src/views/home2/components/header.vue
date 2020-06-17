@@ -64,6 +64,12 @@
             },
         },
         created() {
+	    	const lang = localStorage.getItem('LANG') || 'cn';
+	        switch (lang) {
+		        case 'cn': this.langName = '简体中文';break;
+		        case 'tw': this.langName = '繁體中文';break;
+		        case 'en': this.langName = 'English';break;
+	        }
         	document.onclick = (e)=>{
 		        e = e || window.event;
 		        let t = e.target || e.srcElement;
